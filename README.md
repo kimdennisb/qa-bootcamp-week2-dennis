@@ -70,6 +70,10 @@ Run these steps in order from a terminal.
 - `npm run check`: checks your `.env` and that you can reach the Toolshop API.
 - `npm test`: runs the Playwright tests in `tests/`.
 
+## Typescript
+
+### The following are test files for practising typescript and are located in `src/ts-basics`
+
 ### functions.ts
 Calculates tax from income. The tax year defaults to 2022 if you don't pass one. Years before 2022 multiply by 1.2, anything after uses 1.3.
 
