@@ -69,3 +69,28 @@ Run these steps in order from a terminal.
 
 - `npm run check`: checks your `.env` and that you can reach the Toolshop API.
 - `npm test`: runs the Playwright tests in `tests/`.
+
+## Typescript
+
+### The following are test files for practising typescript and are located in `src/ts-basics`
+
+### functions.ts
+Calculates tax from income. The tax year defaults to 2022 if you don't pass one. Years before 2022 multiply by 1.2, anything after uses 1.3.
+
+### objects.ts
+id is readonly so it can't be changed later, name is optional, and retire is a function that takes a date and logs it.
+
+### optionalChaining.ts
+getCustomer gives back null if the id is 0, otherwise a customer with a birthday. I used ?. so the code doesn't crash when the customer or birthday is missing. log?.('c') does the same thing for a function that might be null, so it only gets called if it exists.
+
+### profile-validator.ts
+A Profile type where settings is optional. Three users: one has notifications on, one has no settings, and one has an empty settings object. isNotified returns false unless notifications is actually set.
+
+### tupples.ts
+A tupple. The first value has to be a number and the second a string.
+
+### typealiases.ts
+Type shape is pulled out into a type alias so I can reuse it. It creates an employee and calls retire with a specific date.
+
+### uniontypes.ts
+Converts kg to lbs. It takes a number or a string and uses typeof to check which one it got. If it's a string like '10kgs', parseInt pulls out the number first.
