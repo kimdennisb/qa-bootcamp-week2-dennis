@@ -16,14 +16,15 @@ export class SortByPriceLowHigh {
 
 
     async goTo() {
+        const resp = this.page.waitForResponse('**/products');
         await this.page.goto('/');
-        //wait for product list to complete loading
-        await this.page.waitForResponse('**/products')
+        await resp;
     }
 
     async sortLowToHigh(): Promise<Response> {
+        const resp = this.page.waitForResponse('**/products');
         await this.getSortDropdown.selectOption({ label: 'Price (Low - High)' });
-        return this.page.waitForResponse('**/products');;
+        return resp;
     }
 
     async getPrices(): Promise<number[]> {

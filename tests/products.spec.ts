@@ -8,5 +8,7 @@ test('Should get products', async ({ request }) => {
 
      const body = await productsResponse.json();
     expect(body.data[0]).toHaveProperty('name')
+    expect(body.data.length).toBeGreaterThan(0)
+    expect(body.data[0]).toHaveProperty('price')
 
 })
